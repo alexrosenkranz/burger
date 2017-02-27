@@ -1,0 +1,33 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "Burger Eating App with Node, Express, Handlebars, & MySQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexrosenkranz/burger.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "handlebars",
+    "mysql"
+  ],
+  "author": "Alex Rosenkranz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexrosenkranz/burger/issues"
+  },
+  "homepage": "https://github.com/alexrosenkranz/burger#readme",
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mysql": "^2.13.0",
+    "parser": "^0.1.4"
+  }
+}
