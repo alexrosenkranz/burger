@@ -1,0 +1,8 @@
+{{#each burgers}}
+<p>{{burger_name}}, {{devoured}}, {{date}} </p>{{/each}}
+
+
+<form action="/create" method="POST">
+  <input name="name" placeholder="name"></input>
+  <input type="submit"></input>
+</form>
