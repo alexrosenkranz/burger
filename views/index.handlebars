@@ -1,5 +1,6 @@
 <div class="jumbotron text-center">
   <h1>Eat Da Burger</h1>
+  <p>Add what type of burger you want to eat next, then DEVOUR IT.</p>
   <form action="/" method="POST" class="form-inline">
   <input name="name" type="text" class="form-control input-lg" placeholder="What type of burger?"></input>
   <input type="submit" class="btn btn-primary btn-lg"></input>
@@ -13,10 +14,10 @@
       <ul class="list-group">
       {{#each burgers}} {{#unless this.devoured}}
       <li class="list-group-item">
-  {{this.burger_name}}
+{{this.burger_name}}
   <form action="/{{this.id}}?_method=PUT" method="POST" class="form-inline">
     <input type="hidden" name="id" value="{{this.id}}">
-    <button type="submit" class="btn btn-sm btn-danger">DEVOUR IT!</button>
+    <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-cutlery" aria-hidden="true"></i> DEVOUR IT!</button>
   </form>
 </li>
 {{/unless}} {{/each}}
