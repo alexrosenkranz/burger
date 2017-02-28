@@ -14,11 +14,19 @@ router.get("/", function(req, res) {
 });
 
 
-router.post("/create", function(req, res) {
+router.post("/", function(req, res) {
     burger.create(['burger_name'], [req.body.name], function(response) {
         res.redirect('/');
     })
 })
+
+router.put("/:id", function(req, res) {
+    burger.update({ devoured: 1 }, { id: req.params.id }, function(response) {
+        res.redirect('/');
+    })
+})
+
+
 
 // Export routes for server.js to use.
 module.exports = router;

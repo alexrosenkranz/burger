@@ -1,8 +1,20 @@
 {{#each burgers}}
-<p>{{burger_name}}, {{devoured}}, {{date}} </p>{{/each}}
+{{#unless this.devoured}}
+<p>{{this.burger_name}}, <form action="/{{this.id}}?_method=PUT" method="POST">
+  <input type="hidden" name="id" value="{{this.id}}">
+  <button type="submit">DEVOUR IT!</button>
+</form></p>
+{{/unless}}
+{{/each}}
 
 
-<form action="/create" method="POST">
+<form action="/" method="POST">
   <input name="name" placeholder="name"></input>
   <input type="submit"></input>
 </form>
+
+{{#each burgers}} {{#if this.devoured}}
+<p>{{this.burger_name}},
+ 
+</p>
+{{/if}} {{/each}}
